@@ -1,4 +1,6 @@
 package com.zuhaib.javacourse.lesson2;
+import com.zuhaib.javacourse.lesson10.LoggingLevel;
+import com.sun.javafx.util.Logging;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -39,12 +41,12 @@ public class personTest {
         person myPerson2 = null;
         final person[] persons2 = { persons[0], null , myPerson , myPerson2 };
 
-        for(String state: MY_STATE_VALUE){
-            if(state.equals("PENDING")){
+        for(LoggingLevel state: LoggingLevel.values() ){
+            if(state == LoggingLevel.PENDING){
             }
-            if(state.equals("PROCESSED")){
+            if(state == LoggingLevel.PROCESSED){
             }
-            if(state.equals("PROCESSING")){
+            if(state == LoggingLevel.PROCESSING){
             }
         }
     }
