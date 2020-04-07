@@ -58,22 +58,21 @@ public class DoubleLinkedList {
     //Insert element at given position
     public synchronized void insertAtPosition(int data, int position){
         if (position > length){position = length;}
-        if (position < 0){length =0;
-        DLLNode temp = head;
-            //System.out.println(getHead());
+        if (position < 0){position = 0;}
+
         if (head == null){
-            head = new DLLNode(data,null,null);
-        }
-        else if (position == 0){
+            head = new DLLNode(data,null,null);}
+
+        else if(position == 0){
             DLLNode newNode = new DLLNode(data,null,head);
-            head.setPrev(newNode);
-        }
-        else{
-            for (int i = 1; i < length; i++){
+            head.setPrev(newNode);}
+
+        else {
+            DLLNode temp = head;
+            for (int i = 1; i <= position; i++){
                 if (i == position){
                     DLLNode newNode = new DLLNode(data,temp.getPrev(),temp);
-                    temp.setPrev(newNode);
-                }
+                    temp.setPrev(newNode);}
                 else{
                 temp = temp.getNext();}
             }
@@ -81,7 +80,6 @@ public class DoubleLinkedList {
         length ++;
         }
 
-    }
 
     //Remove from Begin and return the node
     public synchronized DLLNode removeFromBegin(){
@@ -116,8 +114,10 @@ public class DoubleLinkedList {
         if (head == null){
             return result+"]";
         }
-        DLLNode temp = head;
-        for (int i=0; i < length; i++){
+        result = result+head.getData();
+        DLLNode temp = head.getNext();
+
+        while (temp != null){
             result = result+","+temp.getData();
             temp = temp.getNext();
         }

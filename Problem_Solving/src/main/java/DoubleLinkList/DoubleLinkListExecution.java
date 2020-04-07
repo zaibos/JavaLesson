@@ -13,6 +13,7 @@ public class DoubleLinkListExecution {
         //System.out.println(obj1.removeFromEnd());
         System.out.println(obj1.length);
         System.out.println(obj1.getHead());
-        //System.out.println(obj1.tail);
+        System.out.println(obj1.getTail());
+        System.out.println(obj1.toString());
     }
 }
