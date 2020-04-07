@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="375dc053-2b6a-4b0b-991b-7385c0a53fd2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zuhaib/javacourse/lesson3/SearchTask.java" afterDir="false" />
+    <list default="true" id="f9679788-c7b4-403e-b466-1e93c1c7a00c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_beta_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maven.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zuhaib/javacourse/lesson3/Name.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zuhaib/javacourse/lesson2/personTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zuhaib/javacourse/lesson2/personTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zuhaib/javacourse/lesson2/person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zuhaib/javacourse/lesson3/Name.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/zuhaib/javacourse/lesson2/personTest.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,28 +23,22 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CodeStyleSettingsInfer">
-    <option name="done" value="true" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectCodeStyleSettingsMigration">
-    <option name="version" value="1" />
-  </component>
-  <component name="ProjectId" id="1QXq0LpEXGQBtiB2R79Ldf4pqkG" />
+  <component name="ProjectId" id="1S5zgFxPD6n2FaDI1RsTKB5fHeu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pom.xml" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kappu\IdeaProjects\lesson2\src" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -49,96 +52,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.personTest.shouldReturnNumberOfPerson">
-    <configuration name="personTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lesson2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zuhaib.javacourse.lesson2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.zuhaib.javacourse.lesson2" />
-      <option name="MAIN_CLASS_NAME" value="com.zuhaib.javacourse.lesson2.personTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="personTest.shouldReturmNumberOfPerson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lesson2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zuhaib.javacourse.lesson2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.zuhaib.javacourse.lesson2" />
-      <option name="MAIN_CLASS_NAME" value="com.zuhaib.javacourse.lesson2.personTest" />
-      <option name="METHOD_NAME" value="shouldReturmNumberOfPerson" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="personTest.shouldReturnHelloZuhaib" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lesson2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zuhaib.javacourse.lesson2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.zuhaib.javacourse.lesson2" />
-      <option name="MAIN_CLASS_NAME" value="com.zuhaib.javacourse.lesson2.personTest" />
-      <option name="METHOD_NAME" value="shouldReturnHelloZuhaib" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="personTest.shouldReturnNumberOfPerson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lesson2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zuhaib.javacourse.lesson2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.zuhaib.javacourse.lesson2" />
-      <option name="MAIN_CLASS_NAME" value="com.zuhaib.javacourse.lesson2.personTest" />
-      <option name="METHOD_NAME" value="shouldReturnNumberOfPerson" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.personTest.shouldReturnNumberOfPerson" />
-        <item itemvalue="JUnit.personTest.shouldReturmNumberOfPerson" />
-        <item itemvalue="JUnit.personTest" />
-        <item itemvalue="JUnit.personTest.shouldReturnHelloZuhaib" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="375dc053-2b6a-4b0b-991b-7385c0a53fd2" name="Default Changelist" comment="" />
-      <created>1567927067670</created>
+      <changelist id="f9679788-c7b4-403e-b466-1e93c1c7a00c" name="Default Changelist" comment="" />
+      <created>1570868356390</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1567927067670</updated>
-      <workItem from="1567927085845" duration="10309000" />
-      <workItem from="1570518182624" duration="25768000" />
+      <updated>1570868356390</updated>
     </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
