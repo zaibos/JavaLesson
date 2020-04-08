@@ -7,7 +7,7 @@ public class DoubleLinkedList {
 
     public DoubleLinkedList(){
         head = new DLLNode(Integer.MIN_VALUE,null,null);
-        tail = new DLLNode(Integer.MIN_VALUE,head,null);
+        tail = new DLLNode(Integer.MIN_VALUE,null,null);
         head.setNext(tail);
         length = 0;
     }
@@ -109,7 +109,7 @@ public class DoubleLinkedList {
     }
 
     //Print DLL into string representation
-    public String toString(){
+    public synchronized String toString(){
         String result = "[";
         if (head == null){
             return result+"]";
