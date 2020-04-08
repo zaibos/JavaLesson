@@ -17,21 +17,21 @@ public class DoubleLinkedList {
 
     //Insert at begin
     public synchronized void insertAtBegin(DLLNode node){
-        head.setPrev(node);
-        node.setNext(head);
-        node.setPrev(null);
-        head=node;
-
-//        if (length == 1){
-//            tail=head;
-//        }
-//        else {
-//            DLLNode temp = head;
-//            while (temp.getNext() != null){
-//                temp=temp.getNext();
-//            }
-//            tail=head;
-//        }
+        if(node == null)
+            return;
+        if(head == null)
+        {
+            node.setNext(null);
+            node.setPrev(null);
+            head = node;
+        }
+        else
+        {
+            node.setNext(head);
+            node.setPrev(null);
+            head.setPrev(node);
+            head = node;
+        }
         length ++;
     }
 
@@ -50,7 +50,7 @@ public class DoubleLinkedList {
             temp.setNext(node);
             node.setPrev(temp);
             node.setNext(null);
-            tail=node;
+            //tail=node;
         }
         length ++;
     }
@@ -65,18 +65,24 @@ public class DoubleLinkedList {
 
         else if(position == 0){
             DLLNode newNode = new DLLNode(data,null,head);
-            head.setPrev(newNode);}
-
+            head.setPrev(newNode);
+            head=newNode;
+        }
+//        else if(position == length){
+//            DLLNode newNode = new DLLNode(data,null,null);
+//            insertAtEnd(newNode);
+//        }
         else {
             DLLNode temp = head;
             for (int i = 1; i <= position; i++){
-                if (i == position){
-                    DLLNode newNode = new DLLNode(data,temp.getPrev(),temp);
-                    temp.setPrev(newNode);}
-                else{
-                temp = temp.getNext();}
+                temp = temp.getNext();
+                System.out.println(temp.getData());
+                }
+            DLLNode newNode = new DLLNode(data,null,null);
+            newNode.setPrev(temp.getPrev());
+            newNode.setNext(temp);
+            temp.setPrev(newNode);
             }
-        }
         length ++;
         }
 
@@ -107,6 +113,22 @@ public class DoubleLinkedList {
         length --;
         return p;
     }
+
+    //Match the first given node and tell position
+    public synchronized int matchAtPosition(int data){
+        int position=0;
+        //System.out.println(getHead());
+        DLLNode temp = head;
+        for (int i = 0 ; i < length ; i++){
+            if (temp.getData() == data){
+                position=i;
+                return position;
+            }
+            else{temp=temp.getNext();}
+        }
+        return -1;
+    }
+
 
     //Print DLL into string representation
     public synchronized String toString(){
