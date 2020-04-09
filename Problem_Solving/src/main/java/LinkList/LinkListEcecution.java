@@ -11,11 +11,12 @@ public class LinkListEcecution {
         obj1.insertAtBegin(node1);
         obj1.insertAtEnd(node2);
         obj1.insertAtPosition(5,1);
-        obj1.removeFromEnd();
+        //obj1.removeFromEnd();
         System.out.println(obj1.ListLength());
-        System.out.println(obj1.getPosition(5));
+        //System.out.println(obj1.getPosition(5));
         System.out.println(obj1.toString());
+        obj1.removeMatched(node2);
         System.out.println(obj1.ListLength());
-        System.out.println(obj1.getPositionOfEle(5));
+        //System.out.println(obj1.getPositionOfEle(5));
     }
 }

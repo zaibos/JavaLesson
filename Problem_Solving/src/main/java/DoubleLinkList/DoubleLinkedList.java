@@ -6,9 +6,9 @@ public class DoubleLinkedList {
     DLLNode tail;
 
     public DoubleLinkedList(){
-        head = new DLLNode(Integer.MIN_VALUE,null,null);
-        tail = new DLLNode(Integer.MIN_VALUE,null,null);
-        head.setNext(tail);
+        //head = new DLLNode(Integer.MIN_VALUE,null,null);
+        //tail = new DLLNode(Integer.MIN_VALUE,null,null);
+        //head.setNext(tail);
         length = 0;
     }
     public synchronized int getHead(){return head.getData();}
@@ -50,7 +50,7 @@ public class DoubleLinkedList {
             temp.setNext(node);
             node.setPrev(temp);
             node.setNext(null);
-            //tail=node;
+            tail=node;
         }
         length ++;
     }
@@ -67,7 +67,7 @@ public class DoubleLinkedList {
             DLLNode newNode = new DLLNode(data,null,head);
             head.setPrev(newNode);
             head=newNode;
-        }
+            }
 //        else if(position == length){
 //            DLLNode newNode = new DLLNode(data,null,null);
 //            insertAtEnd(newNode);
@@ -76,7 +76,7 @@ public class DoubleLinkedList {
             DLLNode temp = head;
             for (int i = 1; i <= position; i++){
                 temp = temp.getNext();
-                System.out.println(temp.getData());
+                //System.out.println(temp.getData());
                 }
             DLLNode newNode = new DLLNode(data,null,null);
             newNode.setPrev(temp.getPrev());
@@ -112,6 +112,33 @@ public class DoubleLinkedList {
         }
         length --;
         return p;
+    }
+
+    //Remove element from given position
+    public synchronized void removeMatched(DLLNode node){
+        if (head == null) { return; }
+        if (node.equals(head)){head=head.getNext();return;}
+        if (node.equals(tail)){tail=tail.getPrev();return;}
+
+        DLLNode temp = head.getNext();
+        DLLNode q;
+        while (temp != null){
+
+            if (temp.equals(node)){
+                q=temp.getPrev();
+                System.out.println("q"+(q.getNext()).getData());
+
+                DLLNode next=temp.getNext();
+                q.setNext(next);
+                //System.out.println(next.getData());
+                next.setPrev(q);
+                //System.out.println(next.getPrev().getData());
+                temp=null;
+                return ;
+            }
+            temp=temp.getNext();
+        }
+        length --;
     }
 
     //Match the first given node and tell position

@@ -26,10 +26,12 @@ public class LinkedList {
             head = node;
         }
         else{
-            ListNode p,q;
-            for ( p=head;(q=p.getNext()) != null; p=q ){}
-
-            p.setNext(node);
+            ListNode temp=head;
+            for ( int i =1; i < length;i++){
+                temp=temp.getNext();
+            }
+            temp.setNext(node);
+            node.setNext(null);
         }
         length++;
     }
@@ -89,8 +91,7 @@ public class LinkedList {
             head = head.getNext();
             return;
         }
-        ListNode p = head;
-        ListNode q = null;
+        ListNode p = head,q = null;
         while ((q = p.getNext()) != null) {
             if (node.equals(q)) {
                 p.setNext(q.getNext());
