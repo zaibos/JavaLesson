@@ -115,28 +115,56 @@ public class DoubleLinkedList {
     }
 
     //Remove element from given position
+   /* public synchronized void removeMatched(int data){
+        if (head == null) { return; }
+        if (data == head.getData()){head=head.getNext();}
+        //if (node.equals(tail)){tail=tail.getPrev();}
+        else{
+            DLLNode temp = head.getNext();
+            DLLNode q;
+            while (temp != null){
+
+                if (temp.getData() == data){
+                    q=temp.getPrev();
+                    System.out.println("print"+(temp.getPrev()).getData());
+                    DLLNode next=temp.getNext();
+                    q.setNext(next);
+                    next.setPrev(q);
+                    temp=null;
+                    length --;
+                    return;
+                }
+                temp=temp.getNext();
+        }
+        length --;
+    }}*/
     public synchronized void removeMatched(DLLNode node){
         if (head == null) { return; }
-        if (node.equals(head)){head=head.getNext();return;}
-        if (node.equals(tail)){tail=tail.getPrev();return;}
+        if (node.getData() == head.getData())
+        {head=head.getNext();
+            System.out.println("First node deleted");
+            length --;
+            return;}
+        if (node.getData() == tail.getData()){
+            tail=tail.getPrev();
+            System.out.println("Last node deleted");
+            node=null;
+            length -- ;
+            return;}
 
         DLLNode temp = head.getNext();
-        DLLNode q;
+        int count = 1;
         while (temp != null){
 
-            if (temp.equals(node)){
-                q=temp.getPrev();
-                System.out.println("q"+(q.getNext()).getData());
-
-                DLLNode next=temp.getNext();
-                q.setNext(next);
-                //System.out.println(next.getData());
-                next.setPrev(q);
-                //System.out.println(next.getPrev().getData());
-                temp=null;
-                return ;
+            if (temp.getData() == node.getData()){
+                temp.getPrev().setNext(temp.getNext());
+                temp.getNext().setPrev(temp.getPrev());
+                System.out.println("Node deleted on position:" + count);
             }
             temp=temp.getNext();
+            count++;
+            length --;
+            return ;
         }
         length --;
     }
