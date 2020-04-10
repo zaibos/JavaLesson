@@ -26,15 +26,15 @@ public class DLLNode {
     }
 
     public void setPrev(DLLNode node){
-        this.prev=prev;
+        this.prev=node;
     }
 
     public DLLNode getPrev(){
         return prev;
     }
 
-    public void setNext(DLLNode next){
-        this.next=next;
+    public void setNext(DLLNode node){
+        this.next=node;
     }
 
     public DLLNode getNext(){

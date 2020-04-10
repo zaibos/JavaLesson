@@ -140,17 +140,16 @@ public class DoubleLinkedList {
     }}*/
     public synchronized void removeMatched(DLLNode node){
         if (head == null) { return; }
-        if (node.getData() == head.getData())
-        {head=head.getNext();
+        if (node.getData() == head.getData()){
+            head=head.getNext();
+            head.setPrev(null);
             System.out.println("First node deleted");
-            length --;
-            return;}
+            }
         if (node.getData() == tail.getData()){
             tail=tail.getPrev();
-            System.out.println("Last node deleted");
-            node=null;
-            length -- ;
-            return;}
+            tail.setNext(null);
+            //System.out.println("Last node deleted");
+            }
 
         DLLNode temp = head.getNext();
         int count = 1;
@@ -163,8 +162,6 @@ public class DoubleLinkedList {
             }
             temp=temp.getNext();
             count++;
-            length --;
-            return ;
         }
         length --;
     }

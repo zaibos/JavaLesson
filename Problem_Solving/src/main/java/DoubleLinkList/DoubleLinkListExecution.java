@@ -23,10 +23,10 @@ public class DoubleLinkListExecution {
         System.out.println(obj1.toString());
         //obj1.removeFromEnd();
         //System.out.println("length= "+obj1.length);
-        obj1.removeMatched(node5);
+        obj1.removeMatched(node4);
         //System.out.println("tail= "+obj1.getTail());
         System.out.println(obj1.length);
         System.out.println(obj1.toString());
-        System.out.println("position of element= "+obj1.matchAtPosition(6));
+        //System.out.println("position of element= "+obj1.matchAtPosition(6));
     }
 }

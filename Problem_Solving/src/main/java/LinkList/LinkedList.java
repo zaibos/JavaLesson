@@ -16,8 +16,8 @@ public class LinkedList {
     }
 
     //Get first node of the link
-    public synchronized ListNode getHead(){
-        return head;
+    public synchronized int getHead(){
+        return head.getData();
     }
 
     //Insert Node at the End
@@ -87,17 +87,19 @@ public class LinkedList {
         if (head == null) {
             return;
         }
-        if (node.equals(head)) {
+        if (node.getData() == head.getData()) {
             head = head.getNext();
-            return;
+            System.out.println("Deleted First Node");
         }
-        ListNode p = head,q = null;
-        while ((q = p.getNext()) != null) {
-            if (node.equals(q)) {
-                p.setNext(q.getNext());
-                return;
+        else{
+            ListNode temp = head.getNext(),q = null;
+            while (temp != null) {
+                if (temp.getData() == node.getData()) {
+                    node.setNext(temp.getNext());
+                    return;
+                }
+                temp=temp.getNext();
             }
-            p = q;
         }
         length --;
     }
