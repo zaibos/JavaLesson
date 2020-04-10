@@ -166,6 +166,34 @@ public class DoubleLinkedList {
         length --;
     }
 
+    //Remove element by position
+    public synchronized void removeByPosiiton(int position){
+        if (position < 0 ){
+            position = 1;
+        }
+        if (position >= length ){
+            position = length;
+        }
+        if (head==null){
+            return;
+        }
+        if (position == 1){
+            head = head.getNext();
+            head.setPrev(null);
+        }
+        else{
+            DLLNode temp = head,prev=null,next=null;
+            for ( int i=1;i < position;i++){
+                temp=temp.getNext();
+            }
+            prev=temp.getPrev();
+            next=temp.getNext();
+            prev.setNext(next);
+            next.setPrev(prev);
+        }
+        length--;
+    }
+
     //Match the first given node and tell position
     public synchronized int matchAtPosition(int data){
         int position=0;

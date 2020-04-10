@@ -24,6 +24,7 @@ public class DoubleLinkListExecution {
         //obj1.removeFromEnd();
         //System.out.println("length= "+obj1.length);
         obj1.removeMatched(node4);
+        obj1.removeByPosiiton(3);
         //System.out.println("tail= "+obj1.getTail());
         System.out.println(obj1.length);
         System.out.println(obj1.toString());
