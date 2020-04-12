@@ -16,8 +16,8 @@ public class LinkedList {
     }
 
     //Get first node of the link
-    public synchronized int getHead(){
-        return head.getData();
+    public synchronized ListNode getHead(){
+        return head;
     }
 
     //Insert Node at the End
