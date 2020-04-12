@@ -5,7 +5,7 @@ public class CircularLinkedList {
     public CLLNode tail;
     public CircularLinkedList(){length = 0;}
     //get tail
-    public int getTail(){return tail.getData();}
+    public CLLNode getTail(){return tail;}
     //Insert at peek
     public synchronized void insertATPeek(CLLNode node){
         if (tail == null){
