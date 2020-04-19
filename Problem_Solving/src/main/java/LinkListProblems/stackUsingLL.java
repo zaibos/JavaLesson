@@ -62,5 +62,6 @@ public class stackUsingLL {
         obj.pop();
         System.out.println("Length of stack= "+obj.length);
         System.out.println(obj.toStr());
+        System.out.println(obj.top.getData());
     }
 }
