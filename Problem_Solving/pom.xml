@@ -7,6 +7,40 @@
     <groupId>groupId</groupId>
     <artifactId>Problem_Solving</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-    
+    <dependencies>
+<!--        <dependency>-->
+<!--            <groupId>com.google.common</groupId>-->
+<!--            <artifactId>google-collect</artifactId>-->
+<!--            <version>0.5</version>-->
+<!--        </dependency>-->
+    </dependencies>
+    <build>
+        <sourceDirectory>src</sourceDirectory>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.7</version>
+                <executions>
+                    <execution>
+                        <id>default-cli</id>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <!-- hardcode values, or use properties, depending on what you want
+                                        to do -->
+                                    <groupId>TestMaven</groupId>
+                                    <artifactId>TestMaven</artifactId>
+                                    <version>1.0-SNAPSHOT</version>
+                                    <type>[ packaging ]</type>
+                                    <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                                </artifactItem>
+                            </artifactItems>
+                            <!-- other configurations here -->
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
