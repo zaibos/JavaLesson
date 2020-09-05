@@ -1,6 +1,6 @@
-package LinkList;
+package mian.java.LinkList;
 
-import LinkList.LinkedList;
+import main.java.LinkList.*;
 
 public class LinkListEcecution {
     public static void main(String[] args){

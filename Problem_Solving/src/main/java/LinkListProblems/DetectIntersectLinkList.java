@@ -1,6 +1,6 @@
-package LinkListProblems;
-import LinkList.*;
-import LinkListProblems.stackUsingLL;
+package main.java.LinkListProblems;
+import main.java.LinkList.*;
+
 
 public class DetectIntersectLinkList {
     ListNode head1;
@@ -134,7 +134,7 @@ public class DetectIntersectLinkList {
         Obj1.insertAtEnd(node5);
         DetectIntersectLinkList O = new DetectIntersectLinkList(Obj,Obj1);
         O.Create_Intersect_LinkedList();
-        //O.DetectIntersectingNode();
-        O.detectUsingStack();
+        O.DetectIntersectingNode();
+        //O.detectUsingStack();
     }
 }

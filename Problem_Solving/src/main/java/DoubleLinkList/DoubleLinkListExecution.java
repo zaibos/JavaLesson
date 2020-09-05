@@ -1,4 +1,4 @@
-package DoubleLinkList;
+package main.java.DoubleLinkList;
 
 public class DoubleLinkListExecution {
     public static void main(String[] args){

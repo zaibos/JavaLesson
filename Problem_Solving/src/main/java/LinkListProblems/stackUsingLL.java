@@ -1,5 +1,5 @@
-package LinkListProblems;
-import LinkList.ListNode;
+package main.java.LinkListProblems;
+import main.java.LinkList.ListNode;
 
 import java.util.List;
 

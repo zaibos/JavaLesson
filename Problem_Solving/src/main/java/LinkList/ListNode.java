@@ -1,4 +1,4 @@
-package LinkList;
+package main.java.LinkList;
 
 public class ListNode{
     public int data;

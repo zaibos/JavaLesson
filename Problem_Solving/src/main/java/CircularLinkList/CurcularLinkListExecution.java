@@ -1,4 +1,4 @@
-package CircularLinkList;
+package main.java.CircularLinkList;
 
 public class CurcularLinkListExecution {
     public static void main(String[] args){

@@ -1,5 +1,5 @@
-package LinkListProblems;
-import CircularLinkList.*;
+package main.java.LinkListProblems;
+import main.java.CircularLinkList.*;
 public class DetectCircularLinkList {
     public CLLNode head;
     Object obj;

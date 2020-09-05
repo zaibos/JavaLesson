@@ -1,4 +1,4 @@
-package LinkList;
+package main.java.LinkList;
 
 import java.util.List;
 

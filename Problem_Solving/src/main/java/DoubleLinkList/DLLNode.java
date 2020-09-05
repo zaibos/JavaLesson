@@ -1,4 +1,4 @@
-package DoubleLinkList;
+package main.java.DoubleLinkList;
 
 public class DLLNode {
     public int data;

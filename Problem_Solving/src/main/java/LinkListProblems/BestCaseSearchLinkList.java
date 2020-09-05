@@ -1,5 +1,6 @@
-package LinkListProblems;
-import LinkList.*;
+package main.java.LinkListProblems;
+import main.java.LinkList.*;
+
 public class BestCaseSearchLinkList {
     //O(1) scan to find the element from End
     ListNode head;
