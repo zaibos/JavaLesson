@@ -27,7 +27,7 @@ public class DetectIntersectLinkList {
         }
 
         temp2.setNext(temp);
-        temp.setNext(null);
+        //temp.setNext(null);
         ListNode t1=head1,t2=head2;
         while(t1 != null){System.out.print(t1.getData());t1= t1.getNext();length1++;}
         System.out.print("******next link******");
@@ -79,15 +79,19 @@ public class DetectIntersectLinkList {
         stackUsingLL stack2 = new stackUsingLL();
         ListNode s1=head1;
         ListNode s2=head2;
+        ListNode tempo = null;
+        System.out.println("****Print Stack1****");
         while(s1 != null) {
             System.out.println(s1.getData());
-            stack1.push(s1);
+            ListNode s3 = new ListNode(s1.getData());
+            stack1.push(s3);
             s1 = s1.getNext();
         }
-        System.out.println("loop ke bahar");
+        System.out.println("****Print Stack2****");
         while (s2 != null) {
             System.out.println(s2.getData());
-            stack2.push(s2);
+            ListNode s3 = new ListNode(s2.getData());
+            stack2.push(s3);
             s2=s2.getNext();
         }
 
@@ -99,28 +103,33 @@ public class DetectIntersectLinkList {
         System.out.println(stack1.top.getData());
 
 
-        ListNode top1=stack1.top;
-        ListNode top2=stack2.top;
-        System.out.println(stack1.top.getData());
         while(stack1.top != null && stack2.top != null){
-            System.out.println("inside loop");
-            for (int i=1;i<stack1.length-1;i++){
+            ListNode top1=stack1.top;
+            ListNode top2=stack2.top;
+//            System.out.println("inside loop");
+            for (int i=1;i<stack1.length;i++){
                 top1=top1.getNext();
+            }
+
+            for (int i=1;i<stack2.length;i++){
                 top2=top2.getNext();
             }
-            if (top1.getNext() == top2.getNext() && top1 != top2){
-                stack1.pop();stack1.pop();
-                System.out.println("intersecting node->");}
+            if (top1.getData() == top2.getData()){
+                stack1.pop();stack2.pop();
+                tempo = top1;
+                }
             else{
-                stack1.length--;
+                System.out.println("intersecting node->"+tempo.getData());
+                return;}
             }
-        }}
+        }
 
 
     public static void main(String[] args){
         ListNode node = new ListNode(1);
         ListNode node1 = new ListNode(2);
         ListNode node2 = new ListNode(3);
+        ListNode node7 = new ListNode(7);
         ListNode node3 = new ListNode(4);
         ListNode node4 = new ListNode(5);
         ListNode node5 = new ListNode(6);
@@ -129,12 +138,13 @@ public class DetectIntersectLinkList {
         Obj.insertAtBegin(node);
         Obj.insertAtEnd(node1);
         Obj.insertAtEnd(node2);
+        Obj.insertAtEnd(node7);
         Obj1.insertAtBegin(node3);
         Obj1.insertAtEnd(node4);
         Obj1.insertAtEnd(node5);
         DetectIntersectLinkList O = new DetectIntersectLinkList(Obj,Obj1);
         O.Create_Intersect_LinkedList();
-        O.DetectIntersectingNode();
-        //O.detectUsingStack();
+        //O.DetectIntersectingNode();
+        O.detectUsingStack();
     }
 }

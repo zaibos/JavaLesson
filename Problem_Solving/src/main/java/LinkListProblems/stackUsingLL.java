@@ -12,13 +12,17 @@ public class stackUsingLL {
     }
 
     public synchronized void push(ListNode node){
-        if (top == null){top=node;}
+        if (top == null){
+            top=node;
+        }
         else{
             ListNode temp = top;
-            while(temp.getNext() != null){
+            while(temp.getNext() != null)
+            {
                 temp=temp.getNext();
             }
             temp.setNext(node);
+
         }
         length++;
     }
@@ -53,6 +57,7 @@ public class stackUsingLL {
         ListNode newNode = new ListNode(1);
         ListNode newNode2 = new ListNode(2);
         ListNode newNode3 = new ListNode(3);
+        ListNode newNode4 = new ListNode(4);
 
         stackUsingLL obj = new stackUsingLL();
         obj.push(newNode);
@@ -60,6 +65,7 @@ public class stackUsingLL {
         obj.push(newNode2);
         obj.push(newNode3);
         obj.pop();
+        obj.push(newNode4);
         System.out.println("Length of stack= "+obj.length);
         System.out.println(obj.toStr());
         System.out.println(obj.top.getData());
