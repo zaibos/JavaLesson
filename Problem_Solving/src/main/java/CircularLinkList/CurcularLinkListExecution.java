@@ -14,8 +14,8 @@ public class CurcularLinkListExecution {
         obj.insertAtPosition(5,4);
         obj.removeFromPeek();
         obj.removeFromEnd();
-        obj.removeMatched(4);
-        System.out.println("Tail->"+obj.getTail());
+        obj.removeMatched(1);
+        System.out.println("Tail->"+obj.getTail().getData());
         System.out.println("print length of CLL= "+obj.length);
         System.out.println("printing CLL->"+obj.toString());
     }
