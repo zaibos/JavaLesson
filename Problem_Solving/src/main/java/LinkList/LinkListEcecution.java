@@ -1,4 +1,4 @@
-package mian.java.LinkList;
+package main.java.LinkList;
 
 import main.java.LinkList.*;
 

@@ -11,17 +11,16 @@ public class CircularLinkedList {
         if (tail == null){
             tail=node;
             tail.setNext(tail);
-            //System.out.println("Node inserted at peek");
+            System.out.println("Node inserted at peek"+tail.getData());
         }
         else{
-            CLLNode temp = tail;
-            for (int i=1; i<length;i++){
-                temp=temp.getNext();
-            }
-            node.setNext(tail);
-            tail=node;
-            temp.setNext(tail);
-            //System.out.println("Node inserted at peek");
+            CLLNode temp = tail.getNext();
+//            for (int i=1; i<length;i++){
+//                temp=temp.getNext();
+//            }
+            node.setNext(temp);
+            tail.setNext(node);
+            System.out.println("Node inserted at peek"+tail.getData());
         }
         length++;
     }
@@ -31,16 +30,20 @@ public class CircularLinkedList {
         if (tail==null){
             tail=node;
             tail.setNext(tail);
-            //System.out.println("Node inserted at peek");
+            System.out.println("Node inserted at end"+tail.getData());
         }
         else{
-            CLLNode temp = tail;
+            CLLNode temp = tail.getNext();
+            CLLNode temp2 = tail.getNext();
             for (int i=1; i<length;i++){
                     temp=temp.getNext();
                 }
-            temp.setNext(node);
-            node.setNext(tail);
-            //System.out.println("Node Inserted at end");
+//            temp.setNext(node);
+////            node.setNext(tail.getNext());
+            tail.setNext(node);
+            tail=node;
+            tail.setNext(temp2);
+            System.out.println("Node Inserted at end"+tail.getData());
             }
         length++;
         }
@@ -61,13 +64,16 @@ public class CircularLinkedList {
             insertATPeek(newNode);
         }
         else{
-            CLLNode temp = tail;
+            CLLNode temp = tail.getNext();
             for (int i=1;i < position;i++){
                 temp=temp.getNext();
             }
             CLLNode newNode = new CLLNode(data);
             newNode.setNext(temp.getNext());
             temp.setNext(newNode);
+            if (temp==tail){
+                tail=newNode;
+            }
             length++;
         }
     }
@@ -77,10 +83,12 @@ public class CircularLinkedList {
         if (tail == null){return;}
         else{
             CLLNode temp = tail;
-            for(int i=1;i<length-1;i++){
+            for(int i=1;i<length;i++){
                 temp=temp.getNext();
             }
-            temp.setNext(tail);
+            CLLNode firstNode = tail.getNext();
+            temp.setNext(firstNode);
+            tail=temp;
         }
         length--;
     }
@@ -89,29 +97,28 @@ public class CircularLinkedList {
     public synchronized void removeFromPeek(){
         if (tail == null){return;}
         else{
-            CLLNode temp = tail;
-            for(int i=1;i<length;i++){
-                temp=temp.getNext();
-            }
-            temp.setNext(tail.getNext());
-            tail=tail.getNext();
+            //CLLNode temp = tail;
+            CLLNode second=tail.getNext().getNext();
+            tail.setNext(second);
         }
     length--;
     }
 
     //Remove from position
     public synchronized void removeMatched(int data){
-        if (tail.getData() == data){removeFromPeek();}
+        if (tail.getData() == data){removeFromEnd();}
         else{
-            CLLNode temp = tail; CLLNode temp2 = tail.getNext();
-            for(int i=1;i<length;i++){
-                if(temp2.getData() == data){
-                    temp.setNext(temp2.getNext());
+            CLLNode temp = tail;
+            CLLNode firstNode = tail.getNext();
+            for(int i=0;i<length-1;i++){
+                if(firstNode.getData() == data ){
+                    temp.setNext(firstNode.getNext());
+                    length--;
+                    return;
                 }
-                temp2=temp2.getNext();
+                firstNode=firstNode.getNext();
                 temp=temp.getNext();
             }
-            length--;
         }
     }
 
@@ -121,10 +128,10 @@ public class CircularLinkedList {
         if (tail == null){
             return result+"]";
         }
-        result = result+tail.getData();
+        result = result+tail.getNext().getData();
         CLLNode temp = tail.getNext();
         while (temp != tail){
-            result=result+","+temp.getData();
+            result=result+","+temp.getNext().getData();
             temp=temp.getNext();
         }
         return result+"]";
