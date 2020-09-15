@@ -1,10 +1,8 @@
 package main.java.LinkList;
 
-import java.util.List;
-
 public class LinkedList {
     private int length = 0;
-    ListNode head;
+    public ListNode head;
     public LinkedList(){
         length = 0;
     }
